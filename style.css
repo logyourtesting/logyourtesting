@@ -117,3 +117,25 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Ensure the dropdown appears properly */
+nav ul li {
+    position: relative;
+}
+
+/* Fix dropdown positioning */
+nav ul li ul {
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+}
+
+/* Fix for nested dropdowns */
+nav ul li ul li {
+    width: 100%;
+}
+
+/* Show dropdown on hover */
+nav ul li:hover > ul {
+    display: block;
+}
