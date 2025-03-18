@@ -33,23 +33,22 @@ nav ul li {
     position: relative;
 }
 
+/* Main Menu Links */
 nav ul li a {
     display: block;
     padding: 12px 20px;
     color: white;
     text-decoration: none;
+    background: #444;
 }
 
+/* Hover effect for main menu */
 nav ul li:hover {
     background: #555;
 }
 
 /* Dropdown Menu */
-nav ul li {
-    position: relative;
-}
-
-nav ul li ul.dropdown {
+nav ul li ul {
     display: none;
     position: absolute;
     background: #555;
@@ -62,12 +61,14 @@ nav ul li ul.dropdown {
     z-index: 1000;
 }
 
-nav ul li ul.dropdown li {
+/* Dropdown Items */
+nav ul li ul li {
     display: block;
     text-align: left;
 }
 
-nav ul li ul.dropdown li a {
+/* Dropdown Links */
+nav ul li ul li a {
     padding: 10px;
     display: block;
     color: white;
@@ -75,7 +76,7 @@ nav ul li ul.dropdown li a {
 }
 
 /* Show Dropdown on Hover */
-nav ul li:hover ul.dropdown {
+nav ul li:hover ul {
     display: block;
 }
 
