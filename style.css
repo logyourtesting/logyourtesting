@@ -41,19 +41,50 @@ nav ul li:hover {
     background: #555;
 }
 
+/* Dropdown Menu */
 nav ul li ul {
     display: none;
     position: absolute;
     background: #444;
     top: 100%;
     left: 0;
-    padding: 0;
     list-style: none;
     width: 200px;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul li ul li {
+    display: block;
+    text-align: left;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    display: block;
 }
 
 nav ul li:hover ul {
     display: block;
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li ul {
+        position: static;
+        width: 100%;
+    }
 }
 
 .container {
