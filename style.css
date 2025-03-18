@@ -104,3 +104,35 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Dropdown Styling */
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background: #555;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    width: 200px;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul li ul.dropdown li {
+    display: block;
+    text-align: left;
+}
+
+nav ul li ul.dropdown li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+/* Show Dropdown on Hover */
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
