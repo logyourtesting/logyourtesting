@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Automation Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <style>
+      /* Temporary style, you can move it to style.css later */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+      }
+      .container {
+        max-width: 600px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #output {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: none;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+      <h1>Automation Testing Practice Page</h1>
+
+      <!-- Text Box Section -->
+      <section id="text-box-practice">
+        <h2>Text Box Practice</h2>
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="currentAddress">Current Address</label>
+          <textarea id="currentAddress" rows="3" placeholder="Enter your current address"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="permanentAddress">Permanent Address</label>
+          <textarea id="permanentAddress" rows="3" placeholder="Enter your permanent address"></textarea>
+        </div>
+
+        <button onclick="submitForm()">Submit</button>
+
+        <div id="output">
+          <h2>Form Data:</h2>
+          <p id="nameOutput"></p>
+          <p id="emailOutput"></p>
+          <p id="currentAddressOutput"></p>
+          <p id="permanentAddressOutput"></p>
+        </div>
+
+      </section>
+
+    </div>
+
+    <script src="script.js"></script> <!-- Link your script -->
+    <script>
+      // Temporary script, you can move it to script.js later
+      function submitForm() {
+        document.getElementById('output').style.display = 'block';
+        document.getElementById('nameOutput').textContent = "Full Name: " + document.getElementById('fullName').value;
+        document.getElementById('emailOutput').textContent = "Email: " + document.getElementById('email').value;
+        document.getElementById('currentAddressOutput').textContent = "Current Address: " + document.getElementById('currentAddress').value;
+        document.getElementById('permanentAddressOutput').textContent = "Permanent Address: " + document.getElementById('permanentAddress').value;
+      }
+    </script>
+
+</body>
+</html>
